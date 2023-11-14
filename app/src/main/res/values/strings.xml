@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CoffeeStoreApp</string>
+    <string name="logo">Logo</string>
+    <string name="buttonStartOrdering">Start Ordering</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Cappuccino_btn">Cappuccino</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="pickup_time_format">Pickup Time: %1$s</string>
+    <string name="order_details_format">Order Details: %1$s</string>
+    <string name="about_us">About us : \The Quality Coffee offers a sanctuary for coffee lovers.  Join us for a taste of D.C. Vibrant spirit in the comfort of our café.</string>
+    <string name="start_ordering">Start your order</string>
+    <string name="pickup_time_label">Pick up Time:</string>
+    <string name="place_order">Place your order</string>
+    <string name="select_coffee_size">Select cup size</string>
+    <string name="select_extras">Select Extras</string>
+</resources>

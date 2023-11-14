@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageViewSummaryLogo"
+            android:layout_width="381dp"
+            android:layout_height="336dp"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/logo_coffee_shop" />
+
+        <TextView
+            android:id="@+id/textViewPickupTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pickup Time: "
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:textColor="#473B38"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/textViewOrderDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order Details: "
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:textColor="#473B38"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:padding="8dp" />
+
+
+
+
+
+        <!-- Add TextViews for displaying the summary information -->
+
+        <!-- Static views for company name and logo -->
+        <!-- Scrollable TextView for the order summary -->
+
+        <!-- Other views to display the summary details -->
+        <!-- Full Name, Phone Number, Pickup Time, Order details, etc. -->
+
+    </LinearLayout>
+</ScrollView>
