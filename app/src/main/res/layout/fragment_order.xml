@@ -1,159 +1,239 @@
-
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:padding="16dp">
-        >
-<TextView
-    style="@style/TextAppearance.MaterialComponents.Headline6"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Select Coffee Type"
-    android:layout_marginTop="20dp"
-    android:textColor="#473B38"
-    android:gravity="center"/>
 
-        <RadioGroup
-            android:id="@+id/coffeeTypeRadioGroup"
-            android:checkedButton="@+id/radio_button_1"
+        <TextView
+            android:id="@+id/textViewSelectCoffeeType"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Select Coffee Type"
+            android:textColor="#473B38"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.016" />
+
+        <Button
+            android:id="@+id/button_espresso"
+            android:layout_width="133dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="#473B38"
+            android:text="Espresso"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.812"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSelectCoffeeType"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/button_DarkRoast"
+            android:layout_width="133dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="#473B38"
+            android:text="DarkRoast"
+            app:layout_constraintBottom_toTopOf="@+id/button_blondeRoast"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.143"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSelectCoffeeType"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/button_cappuccino"
+            android:layout_width="133dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="9dp"
+            android:backgroundTint="#473B38"
+            android:text="Cappuccino"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.147"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_DarkRoast"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/button_blondeRoast"
+            android:layout_width="133dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="9dp"
+            android:backgroundTint="#473B38"
+            android:text="Blonde Roast"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.809"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_espresso"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:id="@+id/radio_button_1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSelectCoffeeType">
+            <TextView
+                style="@style/TextAppearance.MaterialComponents.Headline6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Espresso" />
-            <RadioButton
-                android:id="@+id/radio_button_2"
+                android:text="Select Coffee Type"
+                android:layout_marginTop="20dp"
+                android:textColor="#473B38"
+                android:gravity="center"/>
+
+            <RadioGroup
+                android:id="@+id/coffeeTypeRadioGroup"
+                android:checkedButton="@+id/radio_button_1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Cappuccino"/>
-            <RadioButton
-                android:id="@+id/radio_button_3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Dark Roast Caffè Verona"/>
-            <RadioButton
-                android:id="@+id/radio_button_4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Blonde Roast
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radio_button_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Espresso" />
+                <RadioButton
+                    android:id="@+id/radio_button_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Cappuccino"/>
+                <RadioButton
+                    android:id="@+id/radio_button_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Dark Roast Caffè Verona"/>
+                <RadioButton
+                    android:id="@+id/radio_button_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Blonde Roast
 "/>
 
-        </RadioGroup>
+            </RadioGroup>
 
-        <TextView
-            android:id="@+id/textViewSelectCoffeeSize"
-            style="@style/TextAppearance.MaterialComponents.Headline6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/select_coffee_size"
-            android:gravity="center"
-            android:textColor="#473B38"
-            android:padding="8dp"
-            android:visibility="gone" />
-
-        <RadioGroup
-            android:id="@+id/coffeeSizeRadioGroup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:orientation="vertical">
-
-            <RadioButton
-                android:id="@+id/Small_RadioBtn"
+            <TextView
+                android:id="@+id/textViewSelectCoffeeSize"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Small" />
-            <RadioButton
-                android:id="@+id/medium_RadioBtn"
+                android:layout_height="wrap_content"
+                android:text="@string/select_coffee_size"
+                android:gravity="center"
+                android:textColor="#473B38"
+                android:padding="8dp"
+                android:visibility="gone" />
+
+            <RadioGroup
+                android:id="@+id/coffeeSizeRadioGroup"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Medium"/>
-            <RadioButton
-                android:id="@+id/Large_RadioBtn"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/Small_RadioBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Small" />
+                <RadioButton
+                    android:id="@+id/medium_RadioBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Medium"/>
+                <RadioButton
+                    android:id="@+id/Large_RadioBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Large"/>
+
+                <!-- Add RadioButtons for each size here -->
+            </RadioGroup>
+            <!-- CheckBoxes for additional options -->
+            <TextView
+                android:id="@+id/textViewSelectExtras"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Large"/>
+                android:layout_height="wrap_content"
+                android:text="@string/select_extras"
+                android:gravity="center"
+                android:textColor="#473B38"
+                android:padding="8dp"
+                android:visibility="gone" />
 
-            <!-- Add RadioButtons for each size here -->
-        </RadioGroup>
-        <!-- CheckBoxes for additional options -->
-        <TextView
-            android:id="@+id/textViewSelectExtras"
-            style="@style/TextAppearance.MaterialComponents.Headline6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/select_extras"
-            android:gravity="center"
-            android:textColor="#473B38"
-            android:padding="8dp"
-            android:visibility="gone" />
+            <CheckBox
+                android:id="@+id/checkbox_extra_shot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Extra Coffee Shot" />
 
-        <CheckBox
-            android:id="@+id/checkbox_extra_shot"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Extra Coffee Shot" />
+            <CheckBox
+                android:id="@+id/checkbox_sugar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sugar" />
 
-        <CheckBox
-            android:id="@+id/checkbox_sugar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sugar" />
+            <CheckBox
+                android:id="@+id/checkbox_cream"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cream" />
 
-        <CheckBox
-            android:id="@+id/checkbox_cream"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Cream" />
+            <!-- Repeat CheckBoxes for each type of milk -->
+            <CheckBox
+                android:id="@+id/checkbox_whole_milk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Whole Milk" />
 
-        <!-- Repeat CheckBoxes for each type of milk -->
-        <CheckBox
-            android:id="@+id/checkbox_whole_milk"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Whole Milk" />
+            <CheckBox
+                android:id="@+id/checkbox_two_percent_milk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2% Milk" />
 
-        <CheckBox
-            android:id="@+id/checkbox_two_percent_milk"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="2% Milk" />
+            <CheckBox
+                android:id="@+id/checkbox_non_fat_milk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Non-fat Milk" />
 
-        <CheckBox
-            android:id="@+id/checkbox_non_fat_milk"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Non-fat Milk" />
+            <CheckBox
+                android:id="@+id/checkbox_almond_milk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Almond Milk" />
 
-        <CheckBox
-            android:id="@+id/checkbox_almond_milk"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Almond Milk" />
+            <!-- Additional Options, initially invisible -->
+            <!-- Add CheckBoxes for extra shots, milk types etc. here -->
 
-        <!-- Additional Options, initially invisible -->
-        <!-- Add CheckBoxes for extra shots, milk types etc. here -->
-
-        <!-- Continue Button, initially disabled -->
-        <Button
-            android:id="@+id/continueButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#473B38"
-            android:enabled="false"
-            android:text="Continue"
-            android:textColor="@color/white"
-            android:textSize="17sp" />
+            <!-- Continue Button, initially disabled -->
+            <Button
+                android:id="@+id/continueButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#473B38"
+                android:enabled="false"
+                android:text="Continue"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
 
 
-    </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>
